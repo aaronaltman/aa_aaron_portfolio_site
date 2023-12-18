@@ -44,7 +44,7 @@ export default function Intro() {
           </motion.span>
         </div>
       </div>
-      <motion.p
+      <motion.h1
         className="mt-4 mb-10 px-4 text-2xl font-medium !leading-[1.5]"
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
@@ -60,7 +60,7 @@ export default function Intro() {
         <span className="font-bold">8 years</span> of experience. I enjoy
         building <span className="italic">sites & apps</span>. My focus is{" "}
         <span className="underline">React (Next.js)</span>.
-      </motion.p>
+      </motion.h1>
       <motion.div
         className="flex flex-col sm:flex-row justify-center items-center gap-3"
         initial={{ opacity: 0, y: 100 }}
