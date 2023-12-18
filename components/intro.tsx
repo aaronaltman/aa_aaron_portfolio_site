@@ -73,7 +73,7 @@ export default function Intro() {
           href="#contact"
           className="group bg-gray-900 outline-none transition text-white px-7 py-3 flex items-center gap-2 rounded-full focus:scale-110 hover:scale-110 hover:bg-gray-950 active:scale-105"
         >
-          Contact Me{" "}
+          Contact Me
           <BsArrowRight className="group-hover:translate-x-1 transition opacity-70" />
         </Link>
 
