@@ -10,9 +10,12 @@ export default function Skills() {
     <section className="mb-28 max-w-[53rem] scroll-mt-[28rem] text-center sm:mb-40">
       <motion.div id="skills" initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
         <SectionHeading>My skills</SectionHeading>
-        <ul className="flex flex-wrap max-w-lg justify-center items-center">
+        <ul className="flex flex-wrap justify-center items-center gap-2 text-lg text-gray-800">
           {skillsData.map((skill, index) => (
-            <li className="p-4 flex flex-wrap justify-center" key={skill}>
+            <li
+              className="bg-white border border-black/[0.1] rounded-xl px-5 py-3"
+              key={skill}
+            >
               {skill}
             </li>
           ))}
