@@ -2,22 +2,12 @@
 
 import React from "react";
 import SectionHeading from "./section-heading";
+import {
+  VerticalTimeline,
+  VerticalTimelineElement,
+} from "react-vertical-timeline-component";
+import "react-vertical-timeline-component/style.min.css";
 import { experiencesData } from "@/lib/data";
-import { motion } from "framer-motion";
-
-const fadeInAnimationVariants = {
-  initial: {
-    opacity: 0,
-    y: 100,
-  },
-  animate: (index: number) => ({
-    opacity: 1,
-    y: 0,
-    transition: {
-      delay: 0.05 * index,
-    },
-  }),
-};
 
 export default function Experience() {
   return (
@@ -26,20 +16,17 @@ export default function Experience() {
       className="mb-28 max-w-[53rem] scroll-mt-28 text-center sm:mb-40"
     >
       <SectionHeading>My experience</SectionHeading>
-      <ul className="flex flex-wrap justify-center gap-2 text-lg text-gray-800">
-        {experiencesData.map((experience, index) => (
-          <motion.li
-            key={experience.title}
-            custom={index}
-            variants={fadeInAnimationVariants}
-            initial="initial"
-            animate="animate"
-            className="px-4 py-2 bg-gray-200 rounded-md"
-          >
-            {experience.title}
-          </motion.li>
+      <VerticalTimeline>
+        {experiencesData.map((item, index) => (
+          <React.Fragment key={index}>
+            <VerticalTimelineElement>
+              <h3 className="text-black">{item.title}</h3>
+              <p>{item.location}</p>
+              <p>{item.description}</p>
+            </VerticalTimelineElement>
+          </React.Fragment>
         ))}
-      </ul>
+      </VerticalTimeline>
     </section>
   );
 }
