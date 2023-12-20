@@ -12,7 +12,7 @@ export default function Intro() {
       id="home"
       className="mb-28 max-w-[50rem] text-center sm:mb-0 scroll-mt-[100rem]"
     >
-      <div className="flex justify-center items-center">
+      <div className="flex justify-center mt-[2rem] items-center">
         <div className="relative">
           <motion.div
             initial={{ opacity: 0, scale: 0 }}
@@ -29,7 +29,7 @@ export default function Intro() {
               height={250}
               quality={89}
               priority={true}
-              className="rounded-full h-24 w-24 object-cover border-[0.35rem] border-white shadow-xl"
+              className="rounded-full h-24 w-24 object-cover border-[0.35rem] border-white shadow-xl dark:border-gray-900"
             />
           </motion.div>
           <motion.span
